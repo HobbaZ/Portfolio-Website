@@ -1,0 +1,189 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    width:95%;
+    height:100%;
+    margin:auto;
+}
+
+header {
+    position:fixed;
+    background-color: white;
+    width:100%;
+    height:10%;
+    top:0;
+    text-align: center;
+    z-index: 2;
+}
+
+a {
+    font-size: 20px;
+    color:black;
+    text-decoration: none;
+    padding :10px;
+    font-weight: 900;
+}
+
+a:hover {
+    color:red;
+}
+
+#flex-container {
+    margin-top:10%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width:100%;
+    align-items: center;
+}
+
+#flex-container > div {
+    flex-grow:1;
+}
+
+#hero-project {
+    flex: 20 0 100%;
+    position: relative;
+    width: 100%;
+    height:100%;
+    margin-left: 60px;
+}
+
+h1, h2 {
+    color:black;
+    text-align: center;
+}
+
+#about-me {
+    width:80%;
+    height:400px;
+
+}
+
+#text-box {
+    text-align: left;
+    float:left;
+    width:50%;
+}
+
+/*#profile-pic {
+    width:70%;
+    height:70%;
+    float:right;
+    border-radius: 50%;
+}*/
+
+#about-me img {
+    width:30%;
+    height:50%;
+    float:right;
+    border-radius: 50%;
+}
+
+/* projects section*/
+#work {
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    padding-left: 20px;
+}
+
+.project-card {
+    position: relative;
+    width: 30%;
+    height:100%;
+    margin: 10px;
+    text-align: center;
+}
+
+.project-text {
+    background-color: black;
+    font-size: 15px;
+    position:absolute;
+    bottom: 1.5%;
+    left: 2.5%;
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 15px;
+    max-width: 65%;
+    height:20%;
+    z-index: 1;
+}
+
+.project-card h2 {
+    color: white;
+}
+
+.project-text p {
+    color: teal;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+hr {
+    color: black;
+}
+
+#hero-project:hover #gold-color{
+    background-color: rgb(255, 136, 0);
+}
+
+img {
+    filter: grayscale(100%);
+    max-width:100%;
+    object-fit: cover;
+    height:100%;
+    border-radius: 10px;
+}
+
+img:hover{
+    filter: grayscale(0%);
+}
+
+#contact-me {
+    width:100%;
+    height:20%;
+    text-align: center;
+}
+
+footer {
+    width:100%;
+    height:10%;
+    padding:10px;
+}
+
+/*Screen controllers*/
+@media screen and (max-width: 800px){
+    body {
+        background-color: red;
+    }
+
+    .project-card {
+        width:50%;
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 600px){
+    body {
+        background-color: yellow;
+    }
+
+    .project-card {
+        width:100%;
+        flex-direction: column;
+    }
+
+    #hero-project {
+        flex-direction: column;
+        font-size: 50%;
+    }
+}
