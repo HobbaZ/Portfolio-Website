@@ -1,140 +1,64 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
 
-<head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8">
     <title>Portfolio Website</title>
-    <meta name="description" content="Horiseon manages online reputation, search engine Optimization and social media awareness">
-    <meta name="keywords" content="online-reputation-management, search-engine-optimization, brand-awareness, social-media-marketing">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--link css-->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 
     <!--icon kit link-->
     <script src="https://kit.fontawesome.com/4b926c6456.js" crossorigin="anonymous"></script>
-</head>
+  </head>
 
-<body>
-    <div id="flex-container">
-        <!--header-->
-    <header>
-        <h1>Portfolio Website</h1><hr>
+  <body>
+      <main>
+          <header>
+              <!--<h1>Portfolio Website</h1>-->
+            <nav>
+                <li><a href="#about-me-container">About Me</a></li>
+                <li><a href="#project-container">Work</a></li>
+                <li><a href="#contact-container">Contact</a></li>
+            </nav>
+          </header>
 
-        <!--navigation bar-->
-    <nav>
-        <a href="#about-me">Home</a>
-        <a href="#work">Work</a>
-        <a href="#contact-me">Contact</a>
-    </nav>
-    </header>
+          <section id="about-me-section"> <!--main container for left header section and right section-->
+            <section class="section-header"><h1>About Me</h1></section>
+            <section id="about-me-container">
+                <div id="main-image">
+                    <img src="./images/profile-pic.jpg" alt="Zachary Hobba">
+                </div>
+                <div id="main-text">
+                <h2>About Me</h2>
+                <p>About me description goes here</p>
+                </div>
+            </section>
+            </section>
 
-    <div id="about-me">
-        <h2>About Me</h2>
-        <div id="text-box">
-            <h1>Zac Hobba<br></h1>
-            <h2>Web Developer</h2>
-            <p>I'm a Web developer based in the blue mountains attempting to become a pro web developer. My talents include infinite scope creep,
-            making okay web pages and struggling with layouts, amazingly I've still managed to finish (so far) some projects.
-            </p>
-            </div>
-            <div id="profile-pic">
-                <img src="./images/large-pic.jpg" alt="The Author">
-            </div> 
-    </div>
+            <section id="work-section">
+                <section class="section-header"><h1>Projects</h1></section>
+                <section id="project-container">
+                    <section id="hero-project">Hero Project</section>
+                    <section class="project-card">Project 1</section>
+                    <section class="project-card">Project 2</section>
+                    <section class="project-card">Project 3</section>
+                    <section class="project-card">Project 4</section>
+                    <section class="project-card">Project 5</section>
+                    <section class="project-card">Project 6</section>
+                </section>
+            </section>
 
-    <div id="work">
-        <h2>Work</h2>
-        <!--large project-->
-        <div id="hero-project">
-            <a href="https://hobbaz.github.io/Product-Generator-Website/">
-                <img src="./images/vehicle8.png" alt ="Yellow randomly generated car" >
-            </a>
-            <div class="project-text" id="gold-color">
-                <h2>Random Vehicle Generator</h2>
-                <p>Unity Engine, C#</p>
-            </div>
-        </div>
+            <section id="contact-section">
+                <section class="section-header"><h1>Contact</h1></section>
+                <section id="contact-container">
+                    <a href="https://www.linkedin.com/in/zachary-hobba-52aaa182/"><i class="fab fa-linkedin"></i> Linkedin</a>
+                    <a href="zachobba@gmail.com"><i class="fas fa-envelope-square"></i> Email</a>
+                    <a href="https://github.com/HobbaZ?tab=repositories"><i class="fab fa-github"></i> Github</a>
+                </section>
+            </section>
 
-        <!--Project Generator-->
-        <div class="project-card">
-            <a href="https://hobbaz.github.io/Product-Generator-Website/">
-                <img src="./images/product-generator.png" alt ="product generator website screenshot" >
-            </a>
-            <div class="project-text">
-                <h2>Project Generator</h2>
-                <p>HTML, CSS, Javascript</p>
-            </div>
-        </div>
-
-        <!--Geometry Quizzer Program-->
-        <div class="project-card">
-            <a href="https://hobbaz.github.io/Product-Generator-Website/">
-                <img src="./images/Geometry_Program.png" alt ="geometry quiz program screenshot" >
-            </a>
-            <div class="project-text">
-                <h2>Geometry Quiz</h2>
-                <p>Python</p>
-            </div>
-        </div>
-
-        <!--Project Needed-->
-        <div class="project-card">
-            <a href="https://hobbaz.github.io/Product-Generator-Website/">
-                <img src="./images/vehicle8.png" alt ="Yellow randomly generated car" >
-            </a>
-            <div class="project-text">
-                <h2>example project</h2>
-                <p>HTML, CSS, Javascript</p>
-            </div>
-        </div>
-
-        <!--Project Needed-->
-        <div class="project-card">
-            <a href="https://hobbaz.github.io/Product-Generator-Website/">
-                <img src="./images/vehicle8.png" alt ="Yellow randomly generated car" >
-            </a>
-            <div class="project-text">
-                <h2>example project</h2>
-                <p>HTML, CSS, Javascript</p>
-            </div>
-        </div>
-
-        <!--Project Needed-->
-        <div class="project-card">
-            <a href="https://hobbaz.github.io/Product-Generator-Website/">
-                <img src="./images/vehicle8.png" alt ="Yellow randomly generated car" >
-            </a>
-            <div class="project-text">
-                <h2>example project</h2>
-                <p>HTML, CSS, Javascript</p>
-            </div>
-        </div>
-
-
-    <!--Project Needed-->
-        <div class="project-card">
-            <a href="https://hobbaz.github.io/Product-Generator-Website/">
-                <img src="./images/vehicle8.png" alt ="Yellow randomly generated car" >
-            </a>
-            <div class="project-text">
-                <h2>example project</h2>
-                <p>HTML, CSS, Javascript</p>
-            </div>
-        </div>
-
-    </div>
-
-    <div id="contact-me">
-        <h2>Contact Me</h2>
-        <a href="https://www.linkedin.com/in/zachary-hobba-52aaa182/"><i class="fab fa-linkedin" style="font-size: 40px;"></i> Linkedin</a>
-        <a href="zachobba@gmail.com"><i class="fas fa-envelope-square" style="font-size: 40px;"></i> Email</a>
-        <a href="https://github.com/HobbaZ?tab=repositories"><i class="fab fa-github" style="font-size: 40px;"></i> Github</a>
-        <hr>
-    </div>
-
-    <footer>
-        <h4>Zac Hobba Est. 2021</h4>
-    </footer>
-
-    </div>
-</body>
-</html>
+            <footer>
+                Zac Hobba Est. 2021
+            </footer>
+      </main>

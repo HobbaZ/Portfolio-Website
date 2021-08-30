@@ -1,189 +1,197 @@
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    width:95%;
-    height:100%;
-    margin:auto;
+html {
+    background-color: white;
 }
 
+body {
+    width:90%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+
 header {
-    position:fixed;
-    background-color: white;
-    width:100%;
-    height:10%;
     top:0;
-    text-align: center;
-    z-index: 2;
+    width: 100%;
+    background-color: lightsalmon;
+}
+
+nav {
+    display: flex;
+    padding: 5px;
+    right: 0;
+    background-color: lightblue;
+    justify-self: right;
+}
+
+nav a {
+    font-size: 20px;
+}
+
+li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+li:hover a {
+    background-color: brown;
+    color: cadetblue;
 }
 
 a {
-    font-size: 20px;
-    color:black;
+    padding:10px;
     text-decoration: none;
-    padding :10px;
-    font-weight: 900;
+    text-align: center;
+    font-size: 25px;
 }
 
 a:hover {
-    color:red;
+    color: red;
 }
 
-#flex-container {
-    margin-top:10%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+#about-me-section, #work-section, #contact-section { /*main containers for sections*/
     width:100%;
-    align-items: center;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
-#flex-container > div {
-    flex-grow:1;
+#about-me-container, #contact-container {
+    min-width: 70%;
+    background-color: gray;
+    display:flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom:  10px;
+}
+
+#main-image img {
+    max-width:100%;
+    max-height:300px;
+    background-size: contain;
+    filter: grayscale(100%);
+    background-color: darkolivegreen;
+    margin-right:10px;
+    flex: 0 0 auto; /*no growing, no shrinking from change in flex container*/
+}
+
+#main-text {
+    width:70%;
+    height:100%;
+    text-align: left;
+    margin: 0 auto;
+    background-color:khaki;
+    flex: 1 1 auto;
+}
+
+.section-header { /*about me, work and contact left main headers*/
+    min-width: 29%;
+    background-color: darkgoldenrod;
+    height: inherit;
+    margin-right: 1%;
+}
+
+#project-container {
+    min-width: 70%;
+    display: flex;
+    flex-wrap:wrap;
+    background-color: cadetblue;
+    justify-content: space-around;
 }
 
 #hero-project {
-    flex: 20 0 100%;
-    position: relative;
-    width: 100%;
-    height:100%;
-    margin-left: 60px;
-}
-
-h1, h2 {
-    color:black;
-    text-align: center;
-}
-
-#about-me {
-    width:80%;
-    height:400px;
-
-}
-
-#text-box {
-    text-align: left;
-    float:left;
-    width:50%;
-}
-
-/*#profile-pic {
-    width:70%;
-    height:70%;
-    float:right;
-    border-radius: 50%;
-}*/
-
-#about-me img {
-    width:30%;
-    height:50%;
-    float:right;
-    border-radius: 50%;
-}
-
-/* projects section*/
-#work {
-    height:100%;
+    margin: 1%;
     width:100%;
-    display:flex;
-    flex-wrap:wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: baseline;
-    padding-left: 20px;
+    background-color: coral;
+    height: 300px;
 }
 
 .project-card {
-    position: relative;
+    margin: 5px;
     width: 30%;
-    height:100%;
-    margin: 10px;
+    background-color: coral;
+    height: 200px;
+}
+
+#contact-container {
     text-align: center;
-}
-
-.project-text {
-    background-color: black;
-    font-size: 15px;
-    position:absolute;
-    bottom: 1.5%;
-    left: 2.5%;
-    padding: 5px;
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 15px;
-    max-width: 65%;
-    height:20%;
-    z-index: 1;
-}
-
-.project-card h2 {
-    color: white;
-}
-
-.project-text p {
-    color: teal;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-hr {
-    color: black;
-}
-
-#hero-project:hover #gold-color{
-    background-color: rgb(255, 136, 0);
-}
-
-img {
-    filter: grayscale(100%);
-    max-width:100%;
-    object-fit: cover;
-    height:100%;
-    border-radius: 10px;
-}
-
-img:hover{
-    filter: grayscale(0%);
-}
-
-#contact-me {
-    width:100%;
-    height:20%;
-    text-align: center;
+    justify-content: center;
 }
 
 footer {
-    width:100%;
-    height:10%;
-    padding:10px;
+    bottom: 0px;
+    padding: 10px;
 }
 
-/*Screen controllers*/
-@media screen and (max-width: 800px){
-    body {
-        background-color: red;
+/*Layout for different screens*/
+@media only screen and (max-width: 600px) { /*small screens*/
+    nav, nav a, #work-section, #about-me-section, #contact-section,
+    #about-me-container {
+        flex-direction: column;
+        width: 100%;
     }
 
-    .project-card {
-        width:50%;
-        flex-direction: row;
-    }
-}
-
-@media screen and (max-width: 600px){
-    body {
-        background-color: yellow;
-    }
-
-    .project-card {
+    .project-card, #hero-project, .section-header {
         width:100%;
+    }
+}
+
+@media only screen and (min-width: 601px) { /*medium screens*/
+
+    #work-section, #about-me-section, #contact-section,
+    #about-me-container {
         flex-direction: column;
+        width: 100%;
     }
 
-    #hero-project {
-        flex-direction: column;
-        font-size: 50%;
+    nav {
+        justify-content: space-evenly;
+    }
+
+    #hero-project, .section-header {
+        width:100%;
+    }
+
+    #work-section {
+        width:100%;
+    }
+
+    .project-card {
+        width:45%;
+    }
+}
+
+@media only screen and (min-width: 850px) { /*large screens*/
+    #work-section, #about-me-section, #contact-section, #about-me-container {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    nav {
+
+        justify-content: flex-end;
+    }
+
+    .section-header {
+        width:29%;
+    }
+
+    .project-card {
+        width:30%;
     }
 }
