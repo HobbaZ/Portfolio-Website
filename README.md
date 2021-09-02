@@ -5,6 +5,8 @@ Currently there are 4 projects with placeholder images and text for future proje
 
 couldn't get the header or contact section exactly the way I wanted but everything else is alright. The contact and header sections didn't go exactly to plan and the website colour scheme and layout could be improved, but I'll improve upon it as I gain more experience.
 
+Weather app, Ecommere Back-End and Password Generator are just placeholder images as I didn't have enough projects yet.
+
 ![portfolio screenshot](./images/website-screenshot.png)
 
 ### Technology Used
