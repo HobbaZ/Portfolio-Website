@@ -15,8 +15,6 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
     font-family: "Trispace";
 }
 
@@ -25,26 +23,31 @@ header {
     top:0;
     width: 100%;
     display: flex;
-    text-align: left;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+header .header-text {
+    width:400px;
 }
 
 nav {
     display: flex;
+    flex-wrap: wrap;
     padding: 10px;
-    width:100%;
+    width:250px;
     right: 0;
 }
 
 li {
     display: inline;
-    float:right;
     list-style-type: none;
     padding: 5px;
 }
 
 nav a {
     font-size: 18px;
-    display: block;
+
 }
 
 nav a:hover {
@@ -58,6 +61,10 @@ a {
     text-align: center;
     font-size: 25px;
     color: white;
+}
+
+#hero-project a, .project-card a { /*Set this to zero because it moved images*/
+    padding: 0px;
 }
 
 a:hover {
@@ -76,7 +83,6 @@ h1 {
 
 #about-me-section, #work-section, #contact-section { /*main containers for sections*/
     display: flex;
-    justify-content: space-between;
 }
 
 #about-me-section {
@@ -99,7 +105,7 @@ h1 {
 }
 
 #work-section {
-    text-align: center;
+    justify-content: center;
     flex-wrap:wrap;
     margin-bottom: 10px;
     justify-content: space-around;
@@ -121,13 +127,11 @@ img{
 }
 
 .project-card {
-    margin: 0px;
     width: 33.3%;
-    height: 300px;
+    height: 350px;
     position: relative;
     margin-bottom: 1%;
 }
-
 
 .project-text {
     position:absolute;
@@ -165,6 +169,11 @@ img{
     padding-left: 20px;
 }
 
+#contact-section ul {
+    text-align: center;
+    width:100%;
+}
+
 footer {
     bottom: 0px;
     padding: 10px;
@@ -178,18 +187,20 @@ footer {
 
 /*Layout for different screens*/
 @media only screen and (max-width: 600px) { /*small screens*/
-    nav, li, #work-section, #about-me-section {
+    nav, #work-section, #contact-section, #about-me-section, .header-text, .project-card, #hero-project {
         flex-direction: column;
+        text-align: center;
         width: 100%;
     }
 
     li {
-        text-align: center;
+        float:none;
     }
 
-    .project-card, #hero-project, .header-text {
-        width:100%;
+    nav a {
+        display: block;
     }
+
 
     .main-image img{
         padding: 0;
@@ -204,17 +215,18 @@ footer {
 
 @media only screen and (min-width: 601px) { /*medium screens*/
 
-    #work-section, #about-me-section, #contact-section,
-    #about-me-container {
-        flex-direction: column;
+    #work-section, #about-me-section, nav, header {
+        flex-direction: row;
         width: 100%;
     }
 
     nav {
+        text-align: center;
         justify-content: space-evenly;
     }
 
     #hero-project, .header-text {
+        text-align: center;
         width:100%;
     }
 
@@ -228,13 +240,17 @@ footer {
 }
 
 @media only screen and (min-width: 850px) { /*large screens*/
-    #work-section, #about-me-section, #contact-section {
-        flex-direction: row;
-        width: 100%;
+
+    header {
+        justify-content: space-between;
     }
 
     nav {
         justify-content: flex-end;
+    }
+
+    .header-text {
+        text-align: left;
     }
 
     .project-card {
