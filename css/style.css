@@ -5,46 +5,51 @@
 }
 
 html {
-    background-color: white;
+    background-color: black;
+    color:white;
 }
 
 body {
-    width:90%;
+    width:100%;
     min-height: 100vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    font-family: "Trispace";
 }
 
 
 header {
     top:0;
     width: 100%;
-    background-color: lightsalmon;
+    display: flex;
+    text-align: left;
 }
 
 nav {
     display: flex;
-    padding: 5px;
+    padding: 10px;
+    width:100%;
     right: 0;
-    background-color: lightblue;
-    justify-self: right;
-}
-
-nav a {
-    font-size: 20px;
 }
 
 li {
+    display: inline;
+    float:right;
     list-style-type: none;
     padding: 5px;
 }
 
-li:hover a {
-    background-color: brown;
-    color: cadetblue;
+nav a {
+    font-size: 18px;
+    display: block;
+}
+
+nav a:hover {
+    background-color: teal;
+    color: white;
 }
 
 a {
@@ -52,102 +57,148 @@ a {
     text-decoration: none;
     text-align: center;
     font-size: 25px;
+    color: white;
 }
 
 a:hover {
-    color: red;
+    color:teal;
 }
 
 h1 {
     font-size: 40px;
-    text-align: center;
+    text-align: left;
+}
+
+#about-me-section, #work-section, #contact-section, #main-text, #hero-project img, .project-card img {
+    width:100%;
+    height:100%;
 }
 
 #about-me-section, #work-section, #contact-section { /*main containers for sections*/
-    width:100%;
-    height: 100%;
     display: flex;
-    text-align: center;
-    margin-bottom: 8px;
+    justify-content: space-between;
 }
 
-#about-me-container, #contact-container {
-    min-width: 70%;
-    background-color: gray;
-    display:flex;
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom:  10px;
+#about-me-section {
+    text-align: center;
+    background-color: white;
+    color: black;
 }
 
 #main-image img {
-    max-width:100%;
-    max-height:300px;
-    background-size: contain;
-    filter: grayscale(100%);
-    background-color: darkolivegreen;
-    margin-right:10px;
+    width:100%;
+    max-height:600px;
     flex: 0 0 auto; /*no growing, no shrinking from change in flex container*/
 }
 
 #main-text {
-    width:70%;
-    height:100%;
     text-align: left;
-    margin: 0 auto;
-    background-color:khaki;
-    flex: 1 1 auto;
+    margin-top: 10px;
+    padding:10px;
+    flex: 1 1 auto; /*can shrink and grow*/
 }
 
-.section-header { /*about me, work and contact left main headers*/
-    min-width: 29%;
-    background-color: darkgoldenrod;
-    height: inherit;
-    margin-right: 1%;
-}
-
-#project-container {
-    min-width: 70%;
-    display: flex;
+#work-section {
+    text-align: center;
     flex-wrap:wrap;
-    background-color: cadetblue;
+    margin-bottom: 10px;
     justify-content: space-around;
 }
 
 #hero-project {
-    margin: 1%;
     width:100%;
-    background-color: coral;
-    height: 300px;
+    height: 50%;
+    position: relative;
+    margin-bottom: 1%;
+}
+
+img{
+    background-position: center;
+    object-fit: cover;
+    flex: 1 1 auto;
+    /*grayscale filter applied to images*/
+    filter:grayscale(100);
 }
 
 .project-card {
-    margin: 5px;
-    width: 30%;
-    background-color: coral;
-    height: 200px;
+    margin: 0px;
+    width: 33.3%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 1%;
 }
 
-#contact-container {
-    text-align: center;
-    justify-content: center;
+
+.project-text {
+    position:absolute;
+    left:0;
+    top:50%;
+    max-width:250px;
+    height:80px;
+    background-color: black;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.project-text p {
+    color:teal;
+}
+
+/*project text hover opacity effect*/
+#hero-project:hover .project-text, .project-card:hover .project-text{
+    opacity:100%;
+}
+
+/*image hover effects*/
+#hero-project img:hover, .project-card img:hover {
+    filter:grayscale(0);
+}
+
+.header-text {
+    width:100%;
+    text-align: left;
+    font-size: 40px;
+    color: teal;
+    padding-left: 20px;
 }
 
 footer {
     bottom: 0px;
     padding: 10px;
+    font-size: 20px;
+}
+
+/*FontAwesome icons*/
+.fab, .fas {
+    font-size: 40px;
 }
 
 /*Layout for different screens*/
 @media only screen and (max-width: 600px) { /*small screens*/
-    nav, nav a, #work-section, #about-me-section, #contact-section,
-    #about-me-container {
+    nav, li, #work-section, #about-me-section {
         flex-direction: column;
         width: 100%;
     }
 
-    .project-card, #hero-project, .section-header {
+    li {
+        text-align: center;
+    }
+
+    .project-card, #hero-project, .header-text {
         width:100%;
+    }
+
+    .main-image img{
+        padding: 0;
+        margin-right: 0;
+        width:100%;
+    }
+
+    footer {
+        text-align: center;
     }
 }
 
@@ -163,7 +214,7 @@ footer {
         justify-content: space-evenly;
     }
 
-    #hero-project, .section-header {
+    #hero-project, .header-text {
         width:100%;
     }
 
@@ -177,18 +228,13 @@ footer {
 }
 
 @media only screen and (min-width: 850px) { /*large screens*/
-    #work-section, #about-me-section, #contact-section, #about-me-container {
+    #work-section, #about-me-section, #contact-section {
         flex-direction: row;
         width: 100%;
     }
 
     nav {
-
         justify-content: flex-end;
-    }
-
-    .section-header {
-        width:29%;
     }
 
     .project-card {

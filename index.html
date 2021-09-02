@@ -8,6 +8,9 @@
     <!--link css-->
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 
+    <!--Google Font link-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trispace">
+
     <!--icon kit link-->
     <script src="https://kit.fontawesome.com/4b926c6456.js" crossorigin="anonymous"></script>
   </head>
@@ -15,48 +18,114 @@
   <body>
       <main>
           <header>
-              <!--<h1>Portfolio Website</h1>-->
-            <nav>
-                <li><a href="#about-me-container">About Me</a></li>
-                <li><a href="#project-container">Work</a></li>
-                <li><a href="#contact-container">Contact</a></li>
-            </nav>
+                <h1 class="header-text">Zachary Hobba</h1>
+                <nav>
+                    <ul>
+                    <li><a href="#about-me-section">About Me</a></li>
+                    <li><a href="#work-section">Work</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                    </ul>
+                </nav>
           </header>
 
           <section id="about-me-section"> <!--main container for left header section and right section-->
-            <section class="section-header"><h1>About Me</h1></section>
-            <section id="about-me-container">
+            <!--<section class="section-header"><h1>About Me</h1></section>-->
+
                 <div id="main-image">
                     <img src="./images/profile-pic.jpg" alt="Zachary Hobba">
                 </div>
                 <div id="main-text">
                 <h2>About Me</h2>
-                <p>About me description goes here</p>
+                <p>I'm a beginner web developer based in the Blue Mountains. I enjoy working on interesting projects, whether thats refactoring a code base to make it simpler and faster, 
+                    implementing that new feature or turning an idea into a working app or website, I'm up for the challenge. I would currently say that I'm intermediately skilled in HTML and CSS, but a beginner in Javascript and Python.
+                </p>
                 </div>
             </section>
-            </section>
 
-            <section id="work-section">
-                <section class="section-header"><h1>Projects</h1></section>
-                <section id="project-container">
-                    <section id="hero-project">Hero Project</section>
-                    <section class="project-card">Project 1</section>
-                    <section class="project-card">Project 2</section>
-                    <section class="project-card">Project 3</section>
-                    <section class="project-card">Project 4</section>
-                    <section class="project-card">Project 5</section>
-                    <section class="project-card">Project 6</section>
-                </section>
-            </section>
+                <section id="work-section">
+                    <section class= "header-text">Works</section>
 
-            <section id="contact-section">
-                <section class="section-header"><h1>Contact</h1></section>
-                <section id="contact-container">
-                    <a href="https://www.linkedin.com/in/zachary-hobba-52aaa182/"><i class="fab fa-linkedin"></i> Linkedin</a>
-                    <a href="zachobba@gmail.com"><i class="fas fa-envelope-square"></i> Email</a>
-                    <a href="https://github.com/HobbaZ?tab=repositories"><i class="fab fa-github"></i> Github</a>
+                    <!--Random car generator project will be main project-->
+                    <section id="hero-project">
+                        <!--insert image here-->
+                        <img src="./images/vehicle.png" alt="pic of randomly generated blue and white hotrod roadster">
+                        <div class="project-text">
+                            <h3>Random Generated Vehicle Game</h3>
+                            <p>Unity Game Engine, C#</p>
+                        </div>
+                    </section>
+
+                    <!--Geometry Quiz program looks boring, use geometry image -->
+                    <section class="project-card">
+                        <img src="./images/bryan-garces-IXUM4cJynP0-unsplash.jpg" alt="Goemetric blue, purple and white photo by Bryan Garces unsplash">
+                        <!--Photo by <a href="https://unsplash.com/@bryanmgarces?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bryan Garces</a> on <a href="https://unsplash.com/s/photos/shapes-and-patterns?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>-->
+                        <div class="project-text">
+                            <h3>Geometry Quiz Program</h3>
+                            <p>Python</p>
+                        </div>
+                    </section>
+
+                    <!--Javascript Product Generator use screenshot -->
+                    <section class="project-card">
+                        <!--insert image here-->
+                        <img src="./images/product-generator.png" alt="Screenshot of product generator website">
+                        <div class="project-text">
+                            <h3>Prodect Generator</h3>
+                            <p>HTML, CSS, JS</p>
+                        </div>
+                    </section>
+
+                    <!--Horiseon code refactor-->
+                    <section class="project-card">
+                        <!--insert image here-->
+                        <img src="./images/horiseon-refactor.png" alt="Screenshot of Horiseon code refactor project">
+                        <div class="project-text">
+                            <h3>Horiseon Code Refactor</h3>
+                            <p>HTML, CSS</p>
+                        </div>
+                    </section>
+
+                    <!--Weather app (not made yet, placeholder atm)-->
+                    <section class="project-card">
+                        <img src="./images/tom-barrett-hgGplX3PFBg-unsplash.jpg" alt="Image of dark cloudy sky with sunlight bu Tom Barrett unsplash">
+                        <!--Photo by <a href="https://unsplash.com/@wistomsin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tom Barrett</a> on <a href="https://unsplash.com/s/photos/weather?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>-->
+                        <div class="project-text">
+                            <h3>Weather Forcast App</h3>
+                            <p>HTML, CSS, JS</p>
+                        </div>
+                    </section>
+
+                    <!--Ecommerce back end (placeholder image atm)-->
+                    <section class="project-card">
+                        <img src="./images/brandable-box-yiU8G1K85AM-unsplash.jpg" alt="Image of boxes and colourful books on bookshelf by brandable-box unsplash">
+                        <!--Photo by <a href="https://unsplash.com/@brandablebox?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brandable Box</a> on <a href="https://unsplash.com/s/photos/ecommerce?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>-->
+                        <div class="project-text">
+                            <h3>Ecommerce Back End</h3>
+                            <p>JS, SQL</p>
+                        </div>
+                    </section>
+
+                    <!--Placeholder project-->
+                    <section class="project-card">
+                        <img src="./images/dan-nelson-ah-HeguOe9k-unsplash.jpg" alt="Image of locked phone next to computer by Dan Nelson unsplash">
+                        <!--Photo by <a href="https://unsplash.com/@brandablebox?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brandable Box</a> on <a href="https://unsplash.com/s/photos/ecommerce?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>-->
+                        <div class="project-text">
+                            <h3>Password Generator</h3>
+                            <p>HTML, CSS, JS</p>
+                        </div>
+                    </section>
                 </section>
-            </section>
+
+                <section id="contact-section">
+                    <section class= "header-text">Contact Me</section>
+                    <!--icons from FontAwesome-->
+                    <ul>
+                    <li><a href="https://www.linkedin.com/in/zachary-hobba-52aaa182/"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="zachobba@gmail.com"><i class="fas fa-envelope-square"></i></a></li>
+                    <li><a href="https://github.com/HobbaZ?tab=repositories"><i class="fab fa-github"></i></a></li>
+                    </ul>
+                </section>
+
 
             <footer>
                 Zac Hobba Est. 2021
