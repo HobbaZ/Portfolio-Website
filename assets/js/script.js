@@ -10,7 +10,7 @@ const imageArray =
 "./assets/images/horiseon-refactor.png",
 "./assets/images/vehicle.png",
 "./assets/images/weather-api-app.png",
-"./assets/images/vehicle.png",
+"./assets/images/work-day-scheduler.gif",
 ];
 
 function getApi() {
