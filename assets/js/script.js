@@ -32,7 +32,7 @@ function projectGen(repoArray) {
     for (let i = 0; i < repoArray.length; i++) {
 
     const cardArea = document.createElement("div");
-    cardArea.classList.add("col-sm-12", "col-md-6", "col-lg-4");  
+    cardArea.classList.add("col-sm-12", "col-md-6", "col-lg-4", "mb-2");  
     //card
     const card = document.createElement("div");
     card.classList.add("projectCard","p-1");
