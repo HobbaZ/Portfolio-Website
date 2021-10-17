@@ -60,10 +60,10 @@ h1 {
 #main-image img{
     width:90%;
     max-height:90%;
+    text-align: center;
     border-radius: 50%;
     background-position: center;
     object-fit: cover;
-    /*flex: 0 0 auto; /*no growing, no shrinking from change in flex container*/
 }
 
 .cardImage{
@@ -81,4 +81,12 @@ h1 {
 
 footer {
     bottom: 0px;
+}
+
+/*Layout for different screens*/
+@media only screen and (max-width: 600px) { /*small screens*/
+    .projectBkground {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0; 
+    }
 }

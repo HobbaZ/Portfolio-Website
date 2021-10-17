@@ -116,10 +116,7 @@ function projectGen(repoArray) {
     card.appendChild(cardText);
     card.appendChild(cardlinkDeployed);
     card.appendChild(cardlinkGithub);
-
-    //projectDisplay.appendChild(card);
 } 
-
 }
 
 getApi();
