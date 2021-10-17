@@ -70,11 +70,14 @@ function projectGen(repoArray) {
 
     cardlinkGithub.addEventListener("click", function() {
       window.open(repoArray[i].html_url, "_blank")
-      console.log(repoArray[i].html_url);
     });
 
     cardlinkDeployed.addEventListener("click", function() {
-      window.open(('https://hobbaz.github.io/'+repoArray[i].name), "_blank")
+      if (i === 5) {
+        window.open('https://adrift-dev.itch.io/random-vehicle-generator-2' , "_blank")
+        } else {
+          window.open(('https://hobbaz.github.io/'+repoArray[i].name), "_blank")
+        }
     });
 
     //Call second API
