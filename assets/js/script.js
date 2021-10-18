@@ -6,7 +6,7 @@ const imageArray =
 ["./assets/images/coding-quiz.jpeg",
 "./assets/images/CryptoWorld.gif",
 "./assets/images/password-generator.PNG",
-"./assets/images/website-revamp.png",
+"./assets/images/website-revamp.PNG",
 "./assets/images/horiseon-refactor.png",
 "./assets/images/vehicle.png",
 "./assets/images/weather-api-app.png",
