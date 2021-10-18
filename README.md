@@ -1,6 +1,9 @@
 # Portfolio-Website
 This website aims to showcase my previous projects and expertise as a web developer. The first version shown below only used HTML and CSS and looked pretty bland. My latest version of the portfolio uses Bootstrap to aid in layout, Javascript and the Github API to get and display project information. 
 
+### Issues
+Email Me button isn't set up yet
+
 ### Before
 ![portfolio screenshot](./images/website-screenshot.png)
 
