@@ -6,11 +6,12 @@ const imageArray =
 ["./assets/images/coding-quiz.jpeg",
 "./assets/images/CryptoWorld.gif",
 "./assets/images/password-generator.PNG",
-"./assets/images/website-screenshot.png",
+"./assets/images/website-revamp.png",
 "./assets/images/horiseon-refactor.png",
 "./assets/images/vehicle.png",
 "./assets/images/weather-api-app.png",
 "./assets/images/work-day-scheduler.gif",
+"./assets/images/product-generator.PNG",
 ];
 
 function getApi() {
@@ -21,8 +22,8 @@ function getApi() {
         return response.json();
       })
       .then(function (data) {
-        const repoArray = [data[1], data[7], data[10], data[11], data[14], data[15], data[16], data[17]];
-        console.log(repoArray);
+        const repoArray = [data[1], data[2], data[7], data[8], data[11], data[12], data[13], data[14], data[10]];
+        console.log(data);
         projectGen(repoArray)
       });
 }
@@ -44,7 +45,7 @@ function projectGen(repoArray) {
     const cardHeader = document.createElement("h2");
 
     //subtitle
-    const cardSubtitle = document.createElement("h6");
+    const cardSubtitle = document.createElement("p");
 
     //image
     const cardImage = document.createElement("img");
@@ -65,7 +66,6 @@ function projectGen(repoArray) {
     const cardlinkDeployed = document.createElement("button");
     cardlinkDeployed.classList.add("btn", "btn-primary", "w-100", "mb-2");
     const deployedLink = document.createElement("a");
-
     cardlinkDeployed.appendChild(deployedLink);
 
     cardlinkGithub.addEventListener("click", function() {
@@ -103,8 +103,8 @@ function projectGen(repoArray) {
 
     //assign data elements
     cardHeader.textContent = repoArray[i].name;
-    cardText.innerHTML = "<hr><h5>About:</h5>"+repoArray[i].description;
-    cardSubtitle.innerHTML = "Code Breakdown<hr>";
+    cardText.innerHTML = "<h6>About:</h6>"+repoArray[i].description;
+    cardSubtitle.innerHTML = "<br><h6>Code Breakdown</h6>";
     cardlinkDeployed.textContent = "Website";
     cardlinkGithub.textContent = "Github";
 

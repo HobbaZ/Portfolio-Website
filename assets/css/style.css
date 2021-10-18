@@ -5,19 +5,35 @@
 }
 
 html {
-    background-color: white;
     font-size: 15px;
 }
 
 body {
     font-size: 16px;
+    background-color: white;
+    color: #113537;
+}
+
+#about-me {
+    text-align: center;
+}
+
+p {
+    text-align: left;
 }
 
 .projectBkground {
-    background-color: #878472;
+    background-color: #8b786d;
     border-top-left-radius: 1%;
     border-bottom-left-radius: 1%;
-    text-align: center;
+}
+
+.projectBkground h1 {
+    color: white;
+}
+
+form {
+    text-align: left;
 }
 
 header {
@@ -29,17 +45,27 @@ header {
     background-color: #DE541E; 
 }
 
+.btn:hover {
+    background-color: #a83000;
+}
+
 .projectCard {
     background-color: white;
+    border-radius: 2%;
 }
 
 li {
     display: inline;
     list-style-type: none;
+    text-align: center;
 }
 
-nav a:hover {
-    color: black;
+.nav a {
+    color: #8b786d; 
+}
+
+.nav a:hover {
+    color: #283044;
 }
 
 a {
@@ -53,17 +79,17 @@ a:hover {
     color: #DE541E; 
 }
 
-h1 {
+h1, nav, h2, h3, h4, h5, h6 {
     font-family: "Bungee", serif;
+    text-align: center;
 }
 
 #main-image img{
     width:90%;
     max-height:90%;
-    text-align: center;
     border-radius: 50%;
     background-position: center;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .cardImage{
@@ -88,5 +114,21 @@ footer {
     .projectBkground {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0; 
+    }
+
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .fab, .fas {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (min-width: 601px) { /*small screens*/
+    .nav {
+        flex-direction: row;
+        justify-content: end;
     }
 }
