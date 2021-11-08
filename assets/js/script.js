@@ -7,14 +7,30 @@ const imageArray =
 "./assets/images/CryptoWorld.gif",
 "./assets/images/password-generator.PNG",
 "./assets/images/website-revamp.PNG",
+"./assets/images/product-generator.PNG",
 "./assets/images/horiseon-refactor.png",
 "./assets/images/vehicle.png",
 "./assets/images/weather-api-app.png",
 "./assets/images/work-day-scheduler.gif",
-"./assets/images/product-generator.PNG",
+
 ];
 
+const projectNames = 
+["coding-quiz",
+"CryptoWorld",
+"Password-Generator",
+"Portfolio-Website",
+"Refactor-Code-Horiseon",
+"Vehicle-Generator-Game",
+"Weather-API-app",
+"Work-Day-Scheduler",
+"Product-Generator-Website"
+]
+
 function getApi() {
+
+  const repoArray = [];
+
     var requestUrl = 'https://api.github.com/users/HobbaZ/repos';
   
     fetch(requestUrl)
@@ -22,15 +38,27 @@ function getApi() {
         return response.json();
       })
       .then(function (data) {
-        const repoArray = [data[1], data[2], data[7], data[8], data[11], data[12], data[13], data[14], data[10]];
-        console.log(data);
+        for (let i = 0; i < data.length; i++) {
+
+          for (let j = 0; j < projectNames.length; j++) {
+            if (data[i].name === projectNames[j]) {
+              repoArray.push(data[i])
+            }
+            
+          }
+          
+        }
+
+        //const repoArray = [data[1], data[2], data[7], data[8], data[11], data[12], data[13], data[14], data[10]];
+        //console.log(data);
+        console.log(repoArray);
         projectGen(repoArray)
       });
 }
 
 function projectGen(repoArray) {
     
-    for (let i = 0; i < repoArray.length; i++) {
+    for (let k = 0; k < repoArray.length; k++) {
 
     const cardArea = document.createElement("div");
     cardArea.classList.add("col-sm-12", "col-md-6", "col-lg-4", "mb-2");  
@@ -59,7 +87,7 @@ function projectGen(repoArray) {
     const cardlinkGithub = document.createElement("button");
     cardlinkGithub.classList.add("btn", "btn-primary", "w-100", "mb-2");
     const githubLink = document.createElement("a");
-    githubLink.href = repoArray[i].html_url;
+    githubLink.href = repoArray[k].html_url;
     cardlinkGithub.appendChild(githubLink);
 
     //deployment link
@@ -69,19 +97,19 @@ function projectGen(repoArray) {
     cardlinkDeployed.appendChild(deployedLink);
 
     cardlinkGithub.addEventListener("click", function() {
-      window.open(repoArray[i].html_url, "_blank")
+      window.open(repoArray[k].html_url, "_blank")
     });
 
     cardlinkDeployed.addEventListener("click", function() {
-      if (i === 5) {
+      if (k === 6) {
         window.open('https://adrift-dev.itch.io/random-vehicle-generator-2' , "_blank")
         } else {
-          window.open(('https://hobbaz.github.io/'+repoArray[i].name), "_blank")
+          window.open(('https://hobbaz.github.io/'+repoArray[k].name), "_blank")
         }
     });
 
     //Call second API
-    fetch(repoArray[i].languages_url)
+    fetch(repoArray[k].languages_url)
       .then(function (response) {
         return response.json();
       })
@@ -102,13 +130,13 @@ function projectGen(repoArray) {
       });
 
     //assign data elements
-    cardHeader.textContent = repoArray[i].name;
-    cardText.innerHTML = "<h6>About:</h6>"+repoArray[i].description;
+    cardHeader.textContent = repoArray[k].name;
+    cardText.innerHTML = "<h6>About:</h6>"+repoArray[k].description;
     cardSubtitle.innerHTML = "<br><h6>Code Breakdown</h6>";
     cardlinkDeployed.textContent = "Website";
     cardlinkGithub.textContent = "Github";
 
-    cardImage.setAttribute("src", imageArray[i]);
+    cardImage.setAttribute("src", imageArray[k]);
     
     card.appendChild(cardHeader);
     card.appendChild(cardImage);

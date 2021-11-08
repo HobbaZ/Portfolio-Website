@@ -10,7 +10,7 @@ html {
 
 body {
     font-size: 16px;
-    background-color: white;
+    background-color: #81B29A;
     color: #113537;
 }
 
@@ -23,14 +23,14 @@ p {
 }
 
 .projectBkground {
-    background-color: #8b786d;
+    background-color: #F2CC8F;
     border-top-left-radius: 1%;
     border-bottom-left-radius: 1%;
 }
 
-.projectBkground h1 {
+/*.projectBkground h1 {
     color: white;
-}
+}*/
 
 form {
     text-align: left;
@@ -42,7 +42,7 @@ header {
 }
 
 .btn{
-    background-color: #DE541E; 
+    background-color: #113537; 
 }
 
 .btn:hover {
@@ -61,11 +61,11 @@ li {
 }
 
 .nav a {
-    color: #8b786d; 
+    color: #113537; 
 }
 
 .nav a:hover {
-    color: #283044;
+    color: #a83000;
 }
 
 a {
@@ -76,7 +76,7 @@ a {
 }
 
 a:hover {
-    color: #DE541E; 
+    color: #a83000; 
 }
 
 h1, nav, h2, h3, h4, h5, h6 {
