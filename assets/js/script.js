@@ -61,7 +61,7 @@ function projectGen(repoArray) {
     for (let k = 0; k < repoArray.length; k++) {
 
     const cardArea = document.createElement("div");
-    cardArea.classList.add("col-sm-12", "col-md-6", "col-lg-4", "mb-2");  
+    cardArea.classList.add("col-sm-12", "cardArea", "col-md-6", "col-lg-4");  
     //card
     const card = document.createElement("div");
     card.classList.add("projectCard","p-1");
@@ -85,14 +85,14 @@ function projectGen(repoArray) {
 
     //githublink
     const cardlinkGithub = document.createElement("button");
-    cardlinkGithub.classList.add("btn", "btn-primary", "w-100", "mb-2");
+    cardlinkGithub.classList.add("btn", "btn-primary", "w-50", "mx-auto", "mb-2");
     const githubLink = document.createElement("a");
     githubLink.href = repoArray[k].html_url;
     cardlinkGithub.appendChild(githubLink);
 
     //deployment link
     const cardlinkDeployed = document.createElement("button");
-    cardlinkDeployed.classList.add("btn", "btn-primary", "w-100", "mb-2");
+    cardlinkDeployed.classList.add("btn", "btn-primary", "w-50", "mx-auto", "mb-2");
     const deployedLink = document.createElement("a");
     cardlinkDeployed.appendChild(deployedLink);
 
@@ -140,7 +140,7 @@ function projectGen(repoArray) {
     
     card.appendChild(cardHeader);
     card.appendChild(cardImage);
-    card.appendChild(cardSubtitle);
+    //card.appendChild(cardSubtitle);
     card.appendChild(cardText);
     card.appendChild(cardlinkDeployed);
     card.appendChild(cardlinkGithub);
