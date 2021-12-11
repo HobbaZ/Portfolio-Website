@@ -1,0 +1,25 @@
+{
+  "name": "Portfolio-Website",
+  "version": "1.0.0",
+  "description": "This website aims to showcase my previous projects and expertise as a web developer. The first version shown below only used HTML and CSS and looked pretty bland. My latest version of the portfolio uses Bootstrap to aid in layout, Javascript and the Github API to get and display project information.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HobbaZ/Portfolio-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HobbaZ/Portfolio-Website/issues"
+  },
+  "homepage": "https://github.com/HobbaZ/Portfolio-Website#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.7.2"
+  }
+}
