@@ -28,8 +28,6 @@ form {
     text-align: left;
 }
 
-
-
 header {
     top:0;
     width: 100%;
@@ -48,7 +46,7 @@ header {
 }
 
 .projectCard {
-    height: 100%;
+    height: 400px;
     position: relative;
 }
 
@@ -198,9 +196,5 @@ footer {
     .nav {
         flex-direction: row;
         justify-content: end;
-    }
-
-    .cardArea {
-        width: 30%;
     }
 }
