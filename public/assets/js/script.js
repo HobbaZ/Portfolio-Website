@@ -149,20 +149,28 @@ function projectGen(repoArray) {
         let total = 0;
         sum.forEach((element) => {
             total += element;
+            console.log(element);
         });
 
+        let row = document.createElement('div');
+        let container = document.createElement('div');
+
+        row.appendChild(container);
+        cardSubtitle.appendChild(row);
+
         for(const [key,value] of Object.entries(data)) {
-            let breakdown = document.createElement('div');
-            
-            breakdown.textContent = (key +" : " + ((value/total)*100).toFixed(0)+ "%");
-            cardSubtitle.appendChild(breakdown);
+            //create table for charts.css to work
+            let bar = document.createElement('div');
+            bar.classList.add(`${key}`)
+            bar.style.width = `${(value/total)*100}%`;
+            bar.textContent = (key +" " + ((value/total)*100).toFixed(0)+ "%");
+            container.appendChild(bar);
         }
       });
 
     //assign data elements
     cardHeader.textContent = repoArray[k].name;
     cardText.innerHTML = "<h6>About:</h6>"+repoArray[k].description;
-    cardSubtitle.innerHTML = "<br><h6>Code Breakdown</h6>";
     cardlinkDeployed.textContent = "Website";
     cardlinkGithub.textContent = "Github";
 
@@ -172,7 +180,7 @@ function projectGen(repoArray) {
 
     overlay.appendChild(cardHeader);
     card.appendChild(cardImage);
-    //card.appendChild(cardSubtitle);
+    overlay.appendChild(cardSubtitle);
     overlay.appendChild(cardText);
     overlay.appendChild(cardlinkDeployed);
     overlay.appendChild(cardlinkGithub);

@@ -98,10 +98,48 @@ h1, nav, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+.row {
+    display: flex;
+    align-items: stretch;
+}
+
+.CSS, .HTML, .JavaScript {
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.CSS {
+    background-color: rgb(255, 0, 0);
+}
+
+.JavaScript {
+    background-color: rgb(255, 60, 0);
+}
+
+.HTML {
+    background-color: rgb(245, 221, 3);
+    color: black;
+}
+
+.row .container {
+    flex: 1;
+    display: flex;
+    height: 15px;
+    justify-content: flex-start;
+    
+}
+
+.row .bar {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
 .overlay {
     position:absolute;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     top: 0;
     left: 0;
     opacity: 0;
@@ -124,7 +162,7 @@ footer {
 }
 
 /*Layout for different screens*/
-@media only screen and (min-width: 500px) { /*small screens*/
+@media only screen and (max-width: 500px) { /*small screens*/
 
     .nav {
         flex-direction: column;
@@ -136,6 +174,7 @@ footer {
     }
 
     .cardArea {
+        width: 100%;
         border-top: 0px;
         border-right: 0px;
         padding-top: 30px;
@@ -159,5 +198,9 @@ footer {
     .nav {
         flex-direction: row;
         justify-content: end;
+    }
+
+    .cardArea {
+        width: 30%;
     }
 }
