@@ -35,6 +35,11 @@ Go to the [Website](https://zachobbawebdev.herokuapp.com/) now on Heroku
 - [License](#license)
 - [Questions](#questions)
 
+## Future ideas
+- Add latest section to portfolio and fill with latest updated Github project
+- When project added to github, automatically create project card on website
+- Refine colour scheme and layout
+
 ### Technology Used
 - HTML
 - CSS
@@ -48,11 +53,6 @@ Go to the [Website](https://zachobbawebdev.herokuapp.com/) now on Heroku
 [Zachary Hobba](https://github.com/HobbaZ)
 
 You can also contribute by opening a pull request or submitting an issue
-
-## Future ideas
-- Add latest section to portfolio and fill with latest updated Github project
-- When project added to github, automatically create project card on website
-- Refine colour scheme and layout
 
 ### Acknowledgments
 - [Icons by Font Awesome](https://fontawesome.com/)
@@ -71,7 +71,6 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Questions
-Change these to your values
 
 Find me on Github at [HobbaZ](https://github.com/HobbaZ)
 Email me at [zachobba@gmail.com](zachobba@gmail.com)

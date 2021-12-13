@@ -103,7 +103,7 @@ function projectGen(repoArray) {
     const cardHeader = document.createElement("h2");
 
     //subtitle
-    const cardSubtitle = document.createElement("p");
+    const cardSubtitle = document.createElement("div");
 
     //image
     const cardImage = document.createElement("img");
@@ -131,6 +131,7 @@ function projectGen(repoArray) {
     });
 
     cardlinkDeployed.addEventListener("click", function() {
+      //Change links to corresponding websites if not github pages
       if (k === 1) {
         window.open('https://flick3d.herokuapp.com/' , "_blank")
       } else if (k === 3) {
@@ -163,7 +164,6 @@ function projectGen(repoArray) {
         cardSubtitle.appendChild(row);
 
         for(const [key,value] of Object.entries(data)) {
-            //create table for charts.css to work
             let bar = document.createElement('div');
             bar.classList.add(`${key}`)
             bar.style.width = `${(value/total)*100}%`;
