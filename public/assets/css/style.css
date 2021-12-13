@@ -72,7 +72,7 @@ a {
 }
 
 h1, nav, h2, h3, h4, h5, h6 {
-    font-family: "Bungee", serif;
+    font-family: "Contrail One", serif;
     text-align: center;
 }
 
@@ -101,7 +101,7 @@ h1, nav, h2, h3, h4, h5, h6 {
     align-items: stretch;
 }
 
-.CSS, .HTML, .JavaScript {
+.CSS, .HTML, .JavaScript, .Handlebars {
     padding-left: 10px;
     font-size: 15px;
 }
@@ -112,6 +112,10 @@ h1, nav, h2, h3, h4, h5, h6 {
 
 .JavaScript {
     background-color: rgb(255, 60, 0);
+}
+
+.Handlebars {
+    background-color: rgb(0, 85, 85);
 }
 
 .HTML {

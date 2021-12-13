@@ -30,10 +30,10 @@ const submitData = form.addEventListener('submit', (event) => {
 });
 
 const imageArray = 
-["./assets/images/coding-quiz.jpeg",
-"./assets/images/CryptoWorld.gif",
+["./assets/images/CryptoWorld.gif",
+  "./assets/images/flicked.JPG",
 "./assets/images/password-generator.PNG",
-"./assets/images/website-revamp.PNG",
+"./assets/images/portfolio.png",
 "./assets/images/product-generator.PNG",
 "./assets/images/horiseon-refactor.png",
 "./assets/images/vehicle.png",
@@ -43,7 +43,7 @@ const imageArray =
 ];
 
 const projectNames = 
-["coding-quiz",
+["movie-scheduler",
 "CryptoWorld",
 "Password-Generator",
 "Portfolio-Website",
@@ -131,9 +131,13 @@ function projectGen(repoArray) {
     });
 
     cardlinkDeployed.addEventListener("click", function() {
-      if (k === 6) {
+      if (k === 1) {
+        window.open('https://flick3d.herokuapp.com/' , "_blank")
+      } else if (k === 3) {
+        window.open('https://zachobbawebdev.herokuapp.com/' , "_blank")
+        } else if (k === 6) {
         window.open('https://adrift-dev.itch.io/random-vehicle-generator-2' , "_blank")
-        } else {
+        } else if (k !== 1 && k !== 3 && k !== 6) {
           window.open(('https://hobbaz.github.io/'+repoArray[k].name), "_blank")
         }
     });
