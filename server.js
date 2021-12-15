@@ -1,6 +1,7 @@
 let dotenv = require('dotenv').config();
 const express = require('express');
 const path = require('path');
+
 const sgMail = require('@sendgrid/mail')
 
 const PORT = process.env.PORT || 3001;
@@ -14,6 +15,7 @@ app.use(express.static('public'));
 
 // GET Route for homepage
 app.get('/', (request, response) => {
+  response.json({message: 'running'});
   response.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
@@ -40,17 +42,20 @@ app.post('/', (request, response) => {
         <p>${request.body.message}</p>
         <p>Reply to them at ${request.body.email}</p>
         `,
-      }
+      };
 
       sgMail
       .send(mailOptions)
-      .then(() => {
-        console.log('Email sent')
+      .then((response) => {
+        response.send(alert("Email sent"));
+        console.log(response[0].statusCode);
+        console.log(response[0].headers);
       })
       .catch((error) => {
-        console.error(error)
-      })
-    });
+        response.send(alert("Email Failed: Error", error));
+        console.error(error);
+      });
+    })
       
       /*transporter.sendMail(mailOptions, function(error, info){
         if (error) {

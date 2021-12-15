@@ -10,7 +10,7 @@ const email = document.getElementById('yourEmail');
 const subject = document.getElementById('select');
 const message = document.getElementById('message');
 
-const submitData = form.addEventListener('submit', (event) => {
+const submitData = form.addEventListener('submit', async (event) => {
   event.preventDefault();
   let data = {
     name: username.value,
@@ -18,6 +18,22 @@ const submitData = form.addEventListener('submit', (event) => {
     subject: subject.value,
     message: message.value
   }
+
+  const response = await fetch('/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+
+  const emailStatus = await response.json();
+  if (response.ok) {
+    alert("Email sent");
+  } else {
+    alert("Failed to send");
+  }
+  
   console.log(data);
   let success = document.createElement('p');
   success.style.position = "center";
@@ -32,14 +48,6 @@ setTimeout(function() {
   success.style.display = "none"; 
 }, 2000);
 
-
-  fetch('/', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  });
 });
 
 const imageArray = 
