@@ -46,7 +46,7 @@ Go to the [Website](https://zachobbawebdev.herokuapp.com/) now on Heroku
 - Bootstrap
 - Javascript
 - Github API
-- NodeMailer
+- Sendgrid
 - Heroku
 
 ## Contributors

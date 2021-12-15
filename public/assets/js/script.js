@@ -19,6 +19,19 @@ const submitData = form.addEventListener('submit', (event) => {
     message: message.value
   }
   console.log(data);
+  let success = document.createElement('p');
+  success.style.position = "center";
+  form.appendChild(success);
+  //Show sent message after 1 second wait
+  setTimeout(function() {
+    success.textContent = "Email Sent!"; 
+}, 1000);
+
+//Hide message after 2 seconds
+setTimeout(function() {
+  success.style.display = "none"; 
+}, 2000);
+
 
   fetch('/', {
     method: 'POST',
@@ -43,7 +56,7 @@ const imageArray =
 ];
 
 const projectNames = 
-["movie-scheduler",
+["Flicked-Movie-Scheduler",
 "CryptoWorld",
 "Password-Generator",
 "Portfolio-Website",
@@ -173,7 +186,7 @@ function projectGen(repoArray) {
       });
 
     //assign data elements
-    cardHeader.textContent = repoArray[k].name;
+    cardHeader.textContent = repoArray[k].name.replace(/-/g, " "); //need to use global replace as local replace only gets first instance of -
     cardText.innerHTML = "<h6>About:</h6>"+repoArray[k].description;
     cardlinkDeployed.textContent = "Website";
     cardlinkGithub.textContent = "Github";
