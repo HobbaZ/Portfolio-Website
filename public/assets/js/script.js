@@ -48,7 +48,7 @@ const imageArray =
 "./assets/images/password-generator.WebP",
 "./assets/images/portfolio-web.WebP",
 "./assets/images/product-generator.WebP",
-"./assets/images/horiseon-refactor.WebP",
+"./assets/images/horiseon-refactor2.WebP",
 "./assets/images/vehicle.WebP",
 "./assets/images/weather-api-app.WebP",
 "./assets/images/work-day-scheduler.gif",
