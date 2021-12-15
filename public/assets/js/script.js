@@ -44,13 +44,13 @@ setTimeout(function() {
 
 const imageArray = 
 ["./assets/images/CryptoWorld.gif",
-  "./assets/images/flicked.JPG",
-"./assets/images/password-generator.PNG",
-"./assets/images/portfolio.WebP",
+  "./assets/images/flicked.WebP",
+"./assets/images/password-generator.WebP",
+"./assets/images/portfolio-web.WebP",
 "./assets/images/product-generator.WebP",
-"./assets/images/horiseon-refactor.png",
-"./assets/images/vehicle.png",
-"./assets/images/weather-api-app.png",
+"./assets/images/horiseon-refactor.WebP",
+"./assets/images/vehicle.WebP",
+"./assets/images/weather-api-app.WebP",
 "./assets/images/work-day-scheduler.gif",
 
 ];
@@ -99,7 +99,7 @@ function projectGen(repoArray) {
     for (let k = 0; k < repoArray.length; k++) {
 
     const cardArea = document.createElement("div");
-    cardArea.classList.add("col-sm-12", "cardArea", "col-md-6", "col-lg-4");  
+    cardArea.classList.add("col-sm-12", "col-md-6", "col-lg-4", "cardArea",);  
 
     //card
     const card = document.createElement("div");

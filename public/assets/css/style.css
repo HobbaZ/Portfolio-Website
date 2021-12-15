@@ -9,7 +9,6 @@ html {
 }
 
 body {
-    font-size: 16px;
     background-image: linear-gradient(rgb(53, 53, 53),rgb(0, 0, 0));
     color: white;
 }
@@ -56,14 +55,22 @@ li {
     text-align: center;
 }
 
+.nav {
+    display: flex;
+    margin:0 auto;
+}
+
 .nav a, a {
- color: white
+    color: white;
+    font-weight: 300;
+    transition: all 0.5s ease-in-out;
 }
 
 .nav a:hover, a:hover {
     color: #838383;
-    text-decoration: underline;
+    font-weight: 900;
 }
+    
 
 #about-me .fab {
     font-size: 40px;
@@ -169,7 +176,7 @@ footer {
 }
 
 /*Layout for different screens*/
-@media only screen and (max-width: 500px) { /*small screens*/
+@media only screen and (max-width: 450px) { /*small screens*/
 
     .nav {
         flex-direction: column;
@@ -181,27 +188,24 @@ footer {
     }
 
     .cardArea {
-        width: 100%;
         border-top: 0px;
         border-right: 0px;
-        padding-top: 30px;
     }
 
 
 }
 
-@media only screen and (max-width: 699px) { /*medium screens*/
+@media only screen and (min-width: 770px) { /*medium  tablet screens*/
     .nav {
         flex-direction: row;
-        justify-content: end;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
     }
 
-    .cardArea {
-        width: 50%;
-    }
 }
 
-@media only screen and (min-width: 700px) { /*larger screens*/
+@media only screen and (min-width: 771px) { /*larger screens*/
     .nav {
         flex-direction: row;
         justify-content: end;
