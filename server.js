@@ -42,10 +42,10 @@ app.post('/', (request, response) => {
       
       transporter.sendMail(mailOptions, function(error, info){
         if (error) {
-          response.send("Email Failed to Send");
+          response.status(500).send("Email Failed to Send");
           console.log(error);
         } else {
-          response.send("Email Sent");
+          response.status(200).send("Email Sent");
           console.log('Email sent: ' + info.response);
         }
       });

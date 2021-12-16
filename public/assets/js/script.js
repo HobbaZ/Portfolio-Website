@@ -27,13 +27,13 @@ const submitData = form.addEventListener('submit', async (event) => {
     body: JSON.stringify(data),
   })
   .then(data => {
-    console.log("Success:", data);
+    console.log('Sent:', data);
     appendData("Email sent");
   })
-  .catch((error) => {
+  .catch((error => {
     console.error("Error:", error)
     appendData("Email failed");
-  });
+  }));
 
   function appendData(message) {
     let alertmes = document.createElement('p');
