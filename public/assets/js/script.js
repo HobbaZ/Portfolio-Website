@@ -19,39 +19,38 @@ const submitData = form.addEventListener('submit', async (event) => {
     message: message.value
   }
 
-  const response = await fetch('/', {
+  await fetch('/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(data),
+  }).then(data => {
+    console.log("Success:", data);
+    appendData("Email sent");
+  }).catch((error) => {
+    console.error("Error:", error)
+    appendData("Email failed");
   });
 
-  const emailStatus = await response.json();
-  if (response.ok) {
-    alert("Email sent");
-  } else {
-    alert("Failed to send");
-  }
-  
-  console.log(data);
-  let success = document.createElement('p');
-  success.style.position = "center";
-  form.appendChild(success);
+  function appendData(message) {
+    let alertmes = document.createElement('p');
+  alertmes.style.position = "center";
+  form.appendChild(alertmes);
   //Show sent message after 1 second wait
   setTimeout(function() {
-    success.textContent = "Email Sent!"; 
-}, 1000);
+    alertmes.textContent = message; 
+}, 500);
 
-//Hide message after 2 seconds
+//Hide message after 3 seconds
 setTimeout(function() {
-  success.style.display = "none"; 
-}, 2000);
-
+  alertmes.style.display = "none"; 
+}, 3000);
+  }
 });
 
 const imageArray = 
-["./assets/images/CryptoWorld.gif",
+["./assets/images/cryptoworld.WebP",
   "./assets/images/flicked.WebP",
 "./assets/images/password-generator.WebP",
 "./assets/images/portfolio-web.WebP",
@@ -175,7 +174,6 @@ function projectGen(repoArray) {
         let total = 0;
         sum.forEach((element) => {
             total += element;
-            console.log(element);
         });
 
         let row = document.createElement('div');
