@@ -25,10 +25,12 @@ const submitData = form.addEventListener('submit', async (event) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(data),
-  }).then(data => {
+  })
+  .then(data => {
     console.log("Success:", data);
     appendData("Email sent");
-  }).catch((error) => {
+  })
+  .catch((error) => {
     console.error("Error:", error)
     appendData("Email failed");
   });

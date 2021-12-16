@@ -1,7 +1,7 @@
-let dotenv = require('dotenv').config();
+const dotenv = require('dotenv').config();
 const express = require('express');
-const path = require('path');
-const sgMail = require('@sendgrid/mail')
+const path = require("path");
+let nodemailer = require('nodemailer');
 
 const PORT = process.env.PORT || 3001;
 
@@ -20,52 +20,42 @@ app.get('/', (request, response) => {
 // POST request for email
 app.post('/', (request, response) => {
     console.log(request.body);
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
-    /*const transporter = nodemailer.createTransport({
+    const transporter = nodemailer.createTransport({
         service: process.env.SERVICE,
-        port: process.env.PORTEMAIL,
         auth: {
           user: process.env.USER,
-          pass: process.env.PASS,
+          pass: process.env.PASS
         }
-      });*/
+      });
       
       const mailOptions = {
-        from: process.env.EMAIL,
-        to: process.env.EMAIL,
+        from: process.env.USER,
+        to: process.env.USER,
         subject: `${request.body.name} wants ${request.body.subject}`,
         html: `
         <h2>Hi from ${request.body.name}</h2>
         <p>${request.body.message}</p>
         <p>Reply to them at ${request.body.email}</p>
         `,
-      }
-
-      sgMail
-      .send(mailOptions)
-      .then((result) => {
-        response.status(200).send(result);
-      })
-      .catch((error) => {
-        response.status(500).send(error);
-      })
-    });
+      };
       
-      /*transporter.sendMail(mailOptions, function(error, info){
+      transporter.sendMail(mailOptions, function(error, info){
         if (error) {
+          response.send("Email Failed to Send");
           console.log(error);
         } else {
+          response.send("Email Sent");
           console.log('Email sent: ' + info.response);
         }
       });
-});*/
+});
 
 // GET Route if user inputs anything else (put last)
 app.get('*', (request, response) => {
   response.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
-app.listen(PORT, () =>
+app.listen(PORT, () => {
   console.log(`App listening at http://localhost:${PORT} 🚀`)
-);
+});
