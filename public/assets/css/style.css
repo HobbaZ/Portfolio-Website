@@ -34,7 +34,7 @@ header {
 
 .btn {
     border: white 2px solid; 
-    background-color: rgba(0, 0, 0, 0.11);
+    background-color: #0000003d;
     color: white;
     font-size: 15px;
     display: block;
@@ -76,7 +76,7 @@ a {
     font-size: 30px;
 }
 
-h1, nav, h2, h3, h4, h5, h6 {
+h1, nav, h2, h3, h4, h5, h6, footer {
     font-family: "Contrail One", serif;
     text-align: center;
 }
