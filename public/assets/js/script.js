@@ -19,7 +19,7 @@ const submitData = form.addEventListener('submit', async (event) => {
     message: message.value
   }
 
-  await fetch('/', {
+  fetch('/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
