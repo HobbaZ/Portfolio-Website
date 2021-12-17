@@ -23,6 +23,8 @@ app.post('/', (request, response) => {
 
     const transporter = nodemailer.createTransport({
         service: process.env.SERVICE,
+        port: 587,
+        host: process.env.HOST,
         auth: {
           user: process.env.USER,
           pass: process.env.PASS
