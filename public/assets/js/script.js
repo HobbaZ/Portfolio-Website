@@ -200,6 +200,7 @@ function projectGen(repoArray) {
     cardlinkGithub.textContent = "Github";
 
     cardImage.setAttribute("src", imageArray[k]);
+    cardImage.setAttribute("alt", imageArray[k].replace("./assets/images/",""));
     
     card.appendChild(overlay);
 
